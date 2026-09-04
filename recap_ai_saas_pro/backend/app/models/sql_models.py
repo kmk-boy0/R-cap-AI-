@@ -11,6 +11,7 @@ class ContentStatus(str, enum.Enum):
     UNCENSORED = "Uncensored"
 
 class Genre(str, enum.Enum):
+    NOVELAS = "Novelas"
     ROMANCE = "Romance"
     SHONEN = "Shonen"
     ACTION = "Action"
@@ -19,8 +20,8 @@ class Genre(str, enum.Enum):
     ESPIONNAGE = "Espionnage"
     SEINEN = "Seinen"
     ISEKAI = "Isekai"
-    THRILLER = "Thriller"
     FANTASY = "Fantasy"
+    THRILLER = "Thriller"
     SCI_FI = "Sci-Fi"
 
 class CatalogItem(Base):
