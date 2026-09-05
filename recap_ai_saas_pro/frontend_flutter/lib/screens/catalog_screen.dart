@@ -281,7 +281,7 @@ class _CatalogScreenState extends State<CatalogScreen> with SingleTickerProvider
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: Column(
-                            crossAxisAlignment: CrossAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

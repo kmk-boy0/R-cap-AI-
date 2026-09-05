@@ -29,11 +29,11 @@ jobs:
           cache: true
 
       - name: Install dependencies
-        working-directory: recap_ai_saas_pro/frontend_flutter
+        working-directory: ./recap_ai_saas_pro/frontend_flutter
         run: flutter pub get
 
       - name: Build APK
-        working-directory: recap_ai_saas_pro/frontend_flutter
+        working-directory: ./recap_ai_saas_pro/frontend_flutter
         run: flutter build apk --release
 
       - name: Upload APK artifact
