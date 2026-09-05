@@ -10,6 +10,19 @@ class ContentStatus(str, enum.Enum):
     CENSORED = "Censored"
     UNCENSORED = "Uncensored"
 
+class MediaFormat(str, enum.Enum):
+    KDRAMA = "Kdrama"
+    DRAMA_CHINOIS = "Drama Chinois"
+    DRAMA = "Drama"
+    NOVELAS = "Novelas"
+    DESSIN_ANIME = "Dessin Animé"
+    ANIME = "Anime"
+    COURT_METRAGE = "Court-métrage"
+    LONG_METRAGE = "Long-métrage"
+    SERIE_PORNO = "Série Porno"
+    FILM_PORNO = "Film Porno"
+    HENTAI = "Hentai"
+
 class Genre(str, enum.Enum):
     ROMANCE = "Romance"
     SHONEN = "Shonen"
@@ -29,6 +42,7 @@ class CatalogItem(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String(255), nullable=False, index=True)
     description = Column(Text, nullable=True)
+    media_format = Column(String(50), nullable=False, default=MediaFormat.ANIME.value, index=True)
     genre = Column(String(50), nullable=False, index=True)
     flags_censure = Column(Boolean, default=True, nullable=False)
     status = Column(String(20), default=ContentStatus.CENSORED.value, nullable=False)
